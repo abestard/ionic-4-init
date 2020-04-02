@@ -3,62 +3,61 @@ import { Component } from '@angular/core';
 import { Platform, NavController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { AuthService } from './services/auth.service';
-import { AlertService } from './services/alert.service';
+
+import { Pages } from './interfaces/pages';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html'
+  templateUrl: 'app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public appPages = [
-    {
-      title: 'Dashboard',
-      url: '/dashboard',
-      icon: 'home'
-    },
-    {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
-    },
-    {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    },
-  ];
+
+  public appPages: Array<Pages>;
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private authService: AuthService,
-    private navCtrl: NavController,
-    private alertService: AlertService
+    public navCtrl: NavController
   ) {
+    this.appPages = [
+      {
+        title: 'Home',
+        url: '/home-results',
+        direct: 'root',
+        icon: 'home'
+      },
+      {
+        title: 'About',
+        url: '/about',
+        direct: 'forward',
+        icon: 'information-circle-outline'
+      },
+
+      {
+        title: 'App Settings',
+        url: '/settings',
+        direct: 'forward',
+        icon: 'cog'
+      }
+    ];
+
     this.initializeApp();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
-      //this.splashScreen.hide();
-      this.authService.getToken();
-    });
+      this.splashScreen.hide();
+    }).catch(() => {});
+  }
+
+  goToEditProgile() {
+    this.navCtrl.navigateForward('edit-profile');
   }
 
   logout() {
-    this.authService.logout().subscribe(
-      data => {
-        this.alertService.presentToast(data['message']);        
-      },
-      error => {
-        console.log(error);
-      },
-      () => {
-        this.navCtrl.navigateRoot('/landing');
-      }
-    );
+    this.navCtrl.navigateRoot('/');
   }
 }
