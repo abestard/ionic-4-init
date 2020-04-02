@@ -9,7 +9,7 @@ If your Ionic 4 application needs authentication, you have came on right page. I
 
 In this Project I’m using side menu template of Ionic 4. If you already have a project then you can go to [Ionic Auth](https://github.com/flicher-net/ionic-4-auth) and copy only files.
 
-
+s
 ### Prerequisites
 
 [Ionic Framework Docs](https://ionicframework.com/docs/)
