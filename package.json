@@ -1,12 +1,8 @@
 {
-  "name": "app-gitlab",
-  "description": "AppGitlab",
-  "version": "1.0.0",
-  "author": {
-    "name": "BestardTeam",
-    "email": "bestard.rivera@gmail.com"
-  },
-  "homepage": "https://BestardTeam.com",
+  "name": "ionic-auth",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -17,7 +13,6 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^7.2.2",
     "@angular/common": "^7.2.2",
     "@angular/core": "^7.2.2",
     "@angular/forms": "^7.2.2",
@@ -26,13 +21,23 @@
     "@angular/platform-browser-dynamic": "^7.2.2",
     "@angular/router": "^7.2.2",
     "@ionic-native/core": "^5.0.0",
+    "@ionic-native/native-storage": "^5.0.0",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
+    "@ionic-native/toast": "^5.0.0",
     "@ionic/angular": "^4.0.0",
     "@ionic/pro": "2.0.4",
-    "cordova-android": "7.0.0",
+    "browserslist": "^4.11.1",
+    "caniuse-lite": "^1.0.30001038",
+    "cordova-ios": "4.5.5",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-ionic-keyboard": "^2.1.3",
+    "cordova-plugin-ionic-webview": "^2.3.2",
+    "cordova-plugin-nativestorage": "2.3.2",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "core-js": "^2.5.4",
-    "ionicons": "4.5.5",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.29"
   },
@@ -45,11 +50,10 @@
     "@angular/compiler": "~7.2.2",
     "@angular/compiler-cli": "~7.2.2",
     "@angular/language-service": "~7.2.2",
-    "@ionic/angular-toolkit": "~1.3.0",
-    "@ionic/lab": "1.0.20",
+    "@ionic/angular-toolkit": "~1.2.0",
+    "@types/node": "~10.12.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~10.12.0",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -62,5 +66,20 @@
     "ts-node": "~8.0.0",
     "tslint": "~5.12.0",
     "typescript": "~3.1.6"
+  },
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-nativestorage": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-keyboard": {}
+    },
+    "platforms": [
+      "ios"
+    ]
   }
 }
