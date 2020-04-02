@@ -1,5 +1,5 @@
 {
-  "name": "app-gitlab",
+  "name": "gitlab",
   "integrations": {},
-  "type": "ionic-angular"
+  "type": "angular"
 }
