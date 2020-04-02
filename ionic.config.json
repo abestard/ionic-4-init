@@ -1,5 +1,7 @@
 {
-  "name": "newTabsApp",
-  "integrations": {},
+  "name": "ionic4-register-login",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
