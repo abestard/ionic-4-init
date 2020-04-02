@@ -1,5 +1,8 @@
 {
-  "name": "gitlab",
-  "integrations": {},
-  "type": "angular"
+  "name": "cc-v4",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "41aa37d2"
 }
