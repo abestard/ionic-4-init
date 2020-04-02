@@ -1,7 +1,5 @@
 {
-  "name": "ionic4-register-login",
-  "integrations": {
-    "cordova": {}
-  },
+  "name": "ionic4-starter",
+  "integrations": {},
   "type": "angular"
 }
